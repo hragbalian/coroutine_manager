@@ -16,7 +16,7 @@ This class is part of a Python project and requires Python 3.7 or later. Ensure 
 
 ```bash
 pip install pydantic
-
+```
 
 ```python
 import asyncio
@@ -45,3 +45,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+```
