@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.9'
+        python-version: '3.11'
 
     - name: Install Poetry
       run: |
@@ -26,7 +26,6 @@ jobs:
     - name: Install dependencies
       run: |
         poetry install
-        cd simple_coroutine
         poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
     
     - name: Bump version
