@@ -26,6 +26,7 @@ jobs:
     - name: Install dependencies
       run: |
         poetry install
+        cd simple_coroutine
         poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
     
     - name: Bump version
@@ -33,7 +34,6 @@ jobs:
       run: |
         git config user.name "github-actions"
         git config user.email "github-actions@github.com"
-        cd simple_coroutine
         poetry version patch
         git add pyproject.toml
         git commit -m "Bump version to $(poetry version -s)"
